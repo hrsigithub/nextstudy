@@ -3,21 +3,19 @@ import Pagination from '../../components/Pagination'
 import Video from './type'
 import styles from '../../styles/Paginate.module.css'
 
-
 export default function Paginate() {
-  const [video, setVideo] = useState<Video>()
+  const [video, setVideo] = useState<Video>(Object)
 
   useEffect(() => {
     // React18ではuseEffectは２回発火される。
-
     const getVideo = async () => {
       await fetch(
         'https://pixabay.com/api/videos/?key=28425771-40ceff02fb1e573677953406f&q=yellow+flowers'
       )
         .then((res) => res.json())
         .then((video) => {
-          console.log('useEffect:', video)
-          setVideo(video)
+          console.log('useEffect:', video as Video)
+          setVideo(video as Video)
         })
     }
 

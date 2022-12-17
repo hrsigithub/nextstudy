@@ -7,15 +7,16 @@ type Props = {
 
 const VideoList = (props: Props) => {
   const { video } = props
-  // const hits = props.video.hits
 
-  console.log('VideoList:hits:', video)
+  console.log('VideoList:', video)
 
   return (
     <div>
-      {/* {video.hits.map((v) => (
-        <div key={v.id}></div>
-      ))} */}
+      {video.hits?.map((v) => (
+        <div key={v.id}>
+          <video src={v.videos.small.url} />
+        </div>
+      ))}
     </div>
   )
 }

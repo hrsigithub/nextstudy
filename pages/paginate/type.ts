@@ -1,7 +1,7 @@
 type Video = {
   total: number
   totalHits: number
-  hits: Hit[]
+  hits: Hit[] 
 }
 
 type Hit = {
@@ -17,10 +17,10 @@ type Hit = {
   user: string
   userImageURL: string
   user_id: number
-  videos: VideosData
+  videos: Videos
 }
 
-type VideosData = {
+type Videos= {
   large: {
     url: string
     width: number
