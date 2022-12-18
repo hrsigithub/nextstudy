@@ -1,5 +1,5 @@
 import React from 'react'
-import Video from '../pages/paginate/type'
+import Video from './type'
 import styles from '../styles/Paginate.module.css'
 
 type Props = {

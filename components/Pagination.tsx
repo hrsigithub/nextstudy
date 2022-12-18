@@ -1,6 +1,6 @@
 import React from 'react'
 import VideoList from './VideoList'
-import Video from '../pages/paginate/type'
+import Video from './type'
 
 type Props = {
   video: Video

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Pagination from '../../components/Pagination'
-import Video from './type'
+import Video from '../../components/type'
 import styles from '../../styles/Paginate.module.css'
 
 export default function Paginate() {
@@ -24,8 +24,6 @@ export default function Paginate() {
 
     return () => {
       console.log('useEffect:unmaount')
-
-
     }
   }, [])
 
