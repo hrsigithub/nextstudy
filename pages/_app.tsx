@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import '../components/Pagination.css'
 
 import type { AppProps } from 'next/app'
 

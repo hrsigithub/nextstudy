@@ -10,16 +10,23 @@ export default function Paginate() {
     // React18ではuseEffectは２回発火される。
     const getVideo = async () => {
       await fetch(
-        'https://pixabay.com/api/videos/?key=28425771-40ceff02fb1e573677953406f&q=yellow+flowers'
+        'https://pixabay.com/api/videos/?key=28425771-40ceff02fb1e573677953406f&q=woman&editors_choice=true&per_page=3'
       )
         .then((res) => res.json())
         .then((video) => {
           console.log('useEffect:', video as Video)
-          setVideo(video as Video)
+          // setVideo(video as Video)
+          setVideo(video)
         })
     }
 
     getVideo()
+
+    return () => {
+      console.log('useEffect:unmaount')
+
+
+    }
   }, [])
 
   return (

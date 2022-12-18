@@ -1,5 +1,6 @@
 import React from 'react'
 import Video from '../pages/paginate/type'
+import styles from '../styles/Paginate.module.css'
 
 type Props = {
   video: Video
@@ -11,10 +12,10 @@ const VideoList = (props: Props) => {
   console.log('VideoList:', video)
 
   return (
-    <div>
+    <div className={styles.VideoMain}>
       {video.hits?.map((v) => (
         <div key={v.id}>
-          <video src={v.videos.small.url} />
+          <video className={styles.Video} autoPlay muted controls src={v.videos.small.url}></video>
         </div>
       ))}
     </div>
